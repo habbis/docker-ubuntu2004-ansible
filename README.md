@@ -1,6 +1,10 @@
 # Ubuntu 20.04 LTS (Focal Fossa) Ansible Test Image
 
-[![CI](https://github.com/geerlingguy/docker-ubuntu2004-ansible/workflows/Build/badge.svg?branch=master&event=push)](https://github.com/geerlingguy/docker-ubuntu2004-ansible/actions?query=workflow%3ABuild) [![Docker pulls](https://img.shields.io/docker/pulls/geerlingguy/docker-ubuntu2004-ansible)](https://hub.docker.com/r/geerlingguy/docker-ubuntu2004-ansible/)
+This is based on [Jeff Geerling](https://ansible.jeffgeerling.com/) docker config.
+
+Thanks to him for his open source work and here i his [site](https://www.jeffgeerling.com/) .
+
+[![CI](https://github.com/habbis/docker-ubuntu2004-ansible/workflows/Build/badge.svg?branch=master&event=push)](https://github.com/habbis/docker-ubuntu2004-ansible/actions?query=workflow%3ABuild) [![Docker pulls](https://img.shields.io/docker/pulls/habbis/docker-ubuntu2004-ansible)](https://hub.docker.com/r/habbis/docker-ubuntu2004-ansible/)
 
 Ubuntu 20.04 LTS (Focal Fossa) Docker container for Ansible playbook and role testing.
 
@@ -21,8 +25,8 @@ This image is built on Docker Hub automatically any time the upstream OS contain
 ## How to Use
 
   1. [Install Docker](https://docs.docker.com/engine/installation/).
-  2. Pull this image from Docker Hub: `docker pull geerlingguy/docker-ubuntu2004-ansible:latest` (or use the image you built earlier, e.g. `ubuntu2004-ansible:latest`).
-  3. Run a container from the image: `docker run --detach --privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro geerlingguy/docker-ubuntu2004-ansible:latest` (to test my Ansible roles, I add in a volume mounted from the current working directory with ``--volume=`pwd`:/etc/ansible/roles/role_under_test:ro``).
+  2. Pull this image from Docker Hub: `docker pull habbis/docker-ubuntu2004-ansible:latest` (or use the image you built earlier, e.g. `ubuntu2004-ansible:latest`).
+  3. Run a container from the image: `docker run --detach --privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro habbis/docker-ubuntu2004-ansible:latest` (to test my Ansible roles, I add in a volume mounted from the current working directory with ``--volume=`pwd`:/etc/ansible/roles/role_under_test:ro``).
   4. Use Ansible inside the container:
     a. `docker exec --tty [container_id] env TERM=xterm ansible --version`
     b. `docker exec --tty [container_id] env TERM=xterm ansible-playbook /path/to/ansible/playbook.yml --syntax-check`
