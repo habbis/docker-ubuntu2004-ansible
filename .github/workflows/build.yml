@@ -51,5 +51,6 @@ jobs:
           context: ./
           file: Dockerfile
           platforms: linux/amd64
-          push: true
+          #push: true
+          load: true
           tags: ${{ github.repository }}:latest
