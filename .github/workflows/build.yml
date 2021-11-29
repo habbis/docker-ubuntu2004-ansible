@@ -53,4 +53,4 @@ jobs:
           platforms: linux/amd64
           push: true
           #load: true
-          tags: ${{ github.repository }}:latest
+          tags: docker-ubuntu2004-ansible:latest
