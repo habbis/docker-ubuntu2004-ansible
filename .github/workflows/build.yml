@@ -54,3 +54,5 @@ jobs:
           #push: true
           load: true
           tags: ${{ github.repository }}:latest
+          
+      - run: docker push ${{ github.repository }}:latest
