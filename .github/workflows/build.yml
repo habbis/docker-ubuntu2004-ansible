@@ -51,9 +51,6 @@ jobs:
           context: ./
           file: Dockerfile
           platforms: linux/amd64
-          #push: true
-          load: true
+          push: true
+          #load: true
           tags: ${{ github.repository }}:latest
-          
-      - run: docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin ${{ secrets.DOCKERHUB_TOKEN }} && docker push ${{ github.repository }}:latest
-      #- run: docker push ${{ github.repository }}:latest
