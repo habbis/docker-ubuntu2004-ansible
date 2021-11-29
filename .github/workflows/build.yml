@@ -53,4 +53,4 @@ jobs:
           platforms: linux/amd64
           push: true
           #load: true
-          tags: docker-ubuntu2004-ansible:latest
+          tags: habbis0/docker-ubuntu2004-ansible:latest
